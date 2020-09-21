@@ -3,6 +3,12 @@ import { Form, Input, Button, Divider, Row, Col } from "antd"
 import { login } from "../services"
 import { MyContext } from "../context"
 
+let baseURl
+
+process.env.NODE_ENV === "production"
+  ? (baseURL = "https://murmuring-reaches-95521.herokuapp.com")
+  : (baseURL = "http://localhost:3000")
+
 const Login = ({ history }) => {
   const [form] = Form.useForm()
   const { setCtxUser } = useContext(MyContext)
@@ -48,14 +54,12 @@ const Login = ({ history }) => {
       <Row gutter={16}>
         <Col span={12}>
           <Button type='primary' block>
-            <a href='http://localhost:3000/auth/facebook'>
-              Login with Facebook
-            </a>
+            <a href={`${baseURl}/auth/facebook`}>Login with Facebook</a>
           </Button>
         </Col>
         <Col span={12}>
           <Button danger type='primary' block>
-            <a href='http://localhost:3000/auth/google'>Login with Google</a>
+            <a href={`${baseURl}/auth/google`}>Login with Google</a>
           </Button>
         </Col>
       </Row>
