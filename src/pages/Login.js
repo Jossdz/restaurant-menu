@@ -3,7 +3,7 @@ import { Form, Input, Button, Divider, Row, Col } from "antd"
 import { login } from "../services"
 import { MyContext } from "../context"
 
-let baseURl
+let baseURL
 
 process.env.NODE_ENV === "production"
   ? (baseURL = "https://murmuring-reaches-95521.herokuapp.com")
@@ -54,12 +54,12 @@ const Login = ({ history }) => {
       <Row gutter={16}>
         <Col span={12}>
           <Button type='primary' block>
-            <a href={`${baseURl}/auth/facebook`}>Login with Facebook</a>
+            <a href={`${baseURL}/auth/facebook`}>Login with Facebook</a>
           </Button>
         </Col>
         <Col span={12}>
           <Button danger type='primary' block>
-            <a href={`${baseURl}/auth/google`}>Login with Google</a>
+            <a href={`${baseURL}/auth/google`}>Login with Google</a>
           </Button>
         </Col>
       </Row>
