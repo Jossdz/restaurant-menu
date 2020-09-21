@@ -1,0 +1,7 @@
+export { default as Home } from "./Home"
+export { default as NotFound } from "./NotFound"
+export { default as Signup } from "./Signup"
+export { default as Login } from "./Login"
+export { default as Restaurant } from "./Restaurant"
+export { default as NewRestaurant } from "./NewRestaurant"
+export { default as Dish } from "./Dish"
