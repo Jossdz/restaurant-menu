@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { Row, Col, Image, Button, Typography, Skeleton, Tag } from "antd"
 import { getOneDish } from "../services/dish"
 
-const { Title, Text } = Typography
+const { Title } = Typography
 
 const Dish = ({
   match: {
@@ -20,7 +20,7 @@ const Dish = ({
       setDish(dish)
     }
     fetchDish()
-  }, [])
+  }, [dishId])
 
   return dish ? (
     <Row gutter={[16, 16]}>

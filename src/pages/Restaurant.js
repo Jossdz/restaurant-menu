@@ -38,7 +38,8 @@ const Restaurant = ({
     }
     fetchRestaurant()
     setShowModal(false)
-  }, [newDish])
+  }, [newDish, restaurantId])
+
   return restaurant ? (
     <Row gutter={[16, 16]}>
       <Col span={24}>

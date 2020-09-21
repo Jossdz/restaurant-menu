@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
 import { Form, Input, Button, Divider, Row, Col } from "antd"
-import { login, facebookLogin } from "../services"
+import { login } from "../services"
 import { MyContext } from "../context"
 
 const Login = ({ history }) => {
